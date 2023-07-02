@@ -9,22 +9,27 @@
 import UIKit
 
 class PhoneNumbersTableViewController: UITableViewController {
+    
+    var phoneNumbersArray: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(PhoneNumberTableViewCell.self, forCellReuseIdentifier: "celll")
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return phoneNumbersArray.count
     }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celll")
+        //cell?.detailTextLabel?.text = phoneNumbersArray[indexPath.row]
+        cell?.textLabel?.text = phoneNumbersArray[indexPath.row]
+        return cell ?? UITableViewCell()
+    }
 }

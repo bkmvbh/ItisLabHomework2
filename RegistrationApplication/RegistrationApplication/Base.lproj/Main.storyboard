@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--решуЭкзамен-->
+        <!--РешуЭкзамен-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RegistrationApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,20 +59,78 @@
                                     <action selector="checkCoincidences:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REF-fu-Lfq"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="22" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="i" translatesAutoresizingMaskIntoConstraints="NO" id="eid-5q-L1F">
+                                <rect key="frame" x="107" y="124" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="решуЭкзамен" id="8hH-TJ-qem"/>
+                    <navigationItem key="navigationItem" title="РешуЭкзамен" id="8hH-TJ-qem">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Mk7-NC-erD"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="LoginTextField" destination="duk-bN-7X3" id="wjQ-0g-Vr7"/>
                         <outlet property="buttonView" destination="cOL-gI-TzE" id="clz-Mh-LnO"/>
+                        <outlet property="loginTextField" destination="duk-bN-7X3" id="lxW-N6-FGp"/>
                         <outlet property="passwordTextField" destination="dRp-kZ-gk3" id="UV3-8J-SM4"/>
+                        <outlet property="photoImageView" destination="eid-5q-L1F" id="01J-Eb-feO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.52173913043487" y="24.776785714285712"/>
+        </scene>
+        <!--Error View Controller-->
+        <scene sceneID="PGg-HG-xda">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enl-JT-gYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="errorvc" id="EUk-Yk-csI" customClass="ErrorViewController" customModule="RegistrationApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3q-Fv-T7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Foq-MC-Tig">
+                                <rect key="frame" x="129" y="520" width="157" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Понятно">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="errorButton:" destination="EUk-Yk-csI" eventType="touchUpInside" id="Hl3-o2-jCg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неправильный логин или пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAe-4H-hZ8">
+                                <rect key="frame" x="74.5" y="319" width="265" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7y-uT-HFS">
+                                <rect key="frame" x="111.5" y="247" width="191" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <constraints>
+                            <constraint firstItem="jAe-4H-hZ8" firstAttribute="top" secondItem="q7y-uT-HFS" secondAttribute="bottom" constant="8" id="FNQ-Da-jEb"/>
+                            <constraint firstItem="q7y-uT-HFS" firstAttribute="centerX" secondItem="k3q-Fv-T7Z" secondAttribute="centerX" id="Xsr-Da-Ebh"/>
+                            <constraint firstItem="jAe-4H-hZ8" firstAttribute="centerX" secondItem="k3q-Fv-T7Z" secondAttribute="centerX" id="aDs-oZ-LDo"/>
+                            <constraint firstItem="q7y-uT-HFS" firstAttribute="top" secondItem="2Ym-Rk-0Ue" secondAttribute="top" constant="203" id="aEW-LE-lu3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ym-Rk-0Ue"/>
+                    </view>
+                    <connections>
+                        <outlet property="baton" destination="Foq-MC-Tig" id="wWc-rJ-Fyv"/>
+                        <outlet property="errorLabel" destination="q7y-uT-HFS" id="d3t-As-n4Q"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1873.913043478261" y="24.776785714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hVV-HL-pWZ">
@@ -91,4 +149,7 @@
             <point key="canvasLocation" x="19" y="25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="i" width="1200" height="687"/>
+    </resources>
 </document>

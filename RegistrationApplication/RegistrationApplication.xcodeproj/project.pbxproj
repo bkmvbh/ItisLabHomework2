@@ -13,6 +13,8 @@
 		9F40CE3A2A50300700403A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F40CE392A50300700403A83 /* Assets.xcassets */; };
 		9F40CE3D2A50300700403A83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F40CE3B2A50300700403A83 /* LaunchScreen.storyboard */; };
 		9F40CE452A50850600403A83 /* PhoneNumbersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40CE442A50850600403A83 /* PhoneNumbersTableViewController.swift */; };
+		9F40CE492A51B35D00403A83 /* PhoneNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40CE482A51B35D00403A83 /* PhoneNumberTableViewCell.swift */; };
+		9F40CE4B2A51CA4F00403A83 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40CE4A2A51CA4F00403A83 /* ErrorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9F40CE3C2A50300700403A83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F40CE3E2A50300700403A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F40CE442A50850600403A83 /* PhoneNumbersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumbersTableViewController.swift; sourceTree = "<group>"; };
+		9F40CE482A51B35D00403A83 /* PhoneNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTableViewCell.swift; sourceTree = "<group>"; };
+		9F40CE4A2A51CA4F00403A83 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				9F40CE322A50300300403A83 /* AppDelegate.swift */,
 				9F40CE342A50300300403A83 /* ViewController.swift */,
 				9F40CE442A50850600403A83 /* PhoneNumbersTableViewController.swift */,
+				9F40CE482A51B35D00403A83 /* PhoneNumberTableViewCell.swift */,
 				9F40CE362A50300300403A83 /* Main.storyboard */,
+				9F40CE4A2A51CA4F00403A83 /* ErrorViewController.swift */,
 				9F40CE392A50300700403A83 /* Assets.xcassets */,
 				9F40CE3B2A50300700403A83 /* LaunchScreen.storyboard */,
 				9F40CE3E2A50300700403A83 /* Info.plist */,
@@ -140,7 +146,9 @@
 			files = (
 				9F40CE452A50850600403A83 /* PhoneNumbersTableViewController.swift in Sources */,
 				9F40CE352A50300300403A83 /* ViewController.swift in Sources */,
+				9F40CE4B2A51CA4F00403A83 /* ErrorViewController.swift in Sources */,
 				9F40CE332A50300300403A83 /* AppDelegate.swift in Sources */,
+				9F40CE492A51B35D00403A83 /* PhoneNumberTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
